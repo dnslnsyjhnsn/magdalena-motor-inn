@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms | Magdalena Motor Inn</title>
+    <meta name="description" content="Choose from single queen, double queen, or suite accommodations at Magdalena Motor Inn.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/" class="nav-logo">
+                <img src="logo.png" alt="Magdalena Motor Inn">
+            </a>
+            <a href="/#book" class="nav-book">BOOK NOW</a>
+        </div>
+        <div class="menu-overlay">
+            <div class="menu-content">
+                <a href="/rooms.html">ROOMS</a>
+                <a href="/#about">ABOUT</a>
+                <a href="/#book">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Rooms</h1>
+    </div>
+
+    <section class="room-detail">
+        <div class="room-content">
+            <div class="room-images">
+                <div class="placeholder-room-large">Single Queen Room Photo</div>
+            </div>
+            <div class="room-info">
+                <h2>Single Queen</h2>
+                <p class="room-description">Perfect for solo travelers or couples. Features one comfortable queen bed, modern bathroom, and all the essentials for a restful stay under the stars.</p>
+                <ul class="room-amenities">
+                    <li>Queen bed</li>
+                    <li>Private bathroom</li>
+                    <li>WiFi</li>
+                    <li>Air conditioning & heating</li>
+                    <li>Flat screen TV</li>
+                    <li>Mini fridge</li>
+                </ul>
+                <a href="/#book" class="btn-book-room">Book This Room</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="room-detail alt">
+        <div class="room-content reverse">
+            <div class="room-images">
+                <div class="placeholder-room-large">Double Queen Room Photo</div>
+            </div>
+            <div class="room-info">
+                <h2>Double Queen</h2>
+                <p class="room-description">Ideal for families or small groups. Two queen beds provide comfortable sleeping for up to four guests, with plenty of space to spread out.</p>
+                <ul class="room-amenities">
+                    <li>Two queen beds</li>
+                    <li>Private bathroom</li>
+                    <li>WiFi</li>
+                    <li>Air conditioning & heating</li>
+                    <li>Flat screen TV</li>
+                    <li>Mini fridge & microwave</li>
+                </ul>
+                <a href="/#book" class="btn-book-room">Book This Room</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="room-detail">
+        <div class="room-content">
+            <div class="room-images">
+                <div class="placeholder-room-large">Suite Photo</div>
+            </div>
+            <div class="room-info">
+                <h2>Suites</h2>
+                <p class="room-description">Our most spacious option. Perfect for longer stays, work trips, or those who want extra room to relax. Features separate living area and additional amenities.</p>
+                <ul class="room-amenities">
+                    <li>King bed + sofa bed</li>
+                    <li>Separate living area</li>
+                    <li>Private bathroom</li>
+                    <li>WiFi</li>
+                    <li>Air conditioning & heating</li>
+                    <li>Flat screen TV</li>
+                    <li>Full kitchenette</li>
+                </ul>
+                <a href="/#book" class="btn-book-room">Book This Room</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Magdalena Motor Inn</h3>
+                <p>Magdalena, New Mexico</p>
+                <p>Phone: <a href="tel:5755177847">(575) 517-7847</a></p>
+                <p>Email: <a href="mailto:info@magdalenamotorinn.com">info@magdalenamotorinn.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Magdalena Motor Inn</p>
+        </div>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const menuLinks = document.querySelectorAll('.menu-content a');
+        
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.toggle('active');
+        });
+        
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuOverlay.classList.remove('active');
+            }
+        });
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOverlay.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
